@@ -5,7 +5,7 @@
 <table>
       <tr>
           <td>empty</td>
-            <td>Stream<T> empty()</td>
+         <td>Stream<T> empty()</td>
           <td>empty方法返回一个空的顺序Stream，该Stream里面不包含元素项。</td>
       </tr>
     <tr>
@@ -24,14 +24,12 @@
           <td>Stream<T> generate(Supplier<T> s)</td>
         <td>返回无限长度的Stream,其元素由Supplier接口的提供</td>
     </tr>
-
     <tr>
         <td>iterate</td>
           <td> Stream<T> iterate(final T seed, final UnaryOperator<T> f) </td>
         <td>返回一个无限长度的Stream，与generate方法不同的是，它是通过函数f对给指定的元素种子不停迭代而产生无限Stream。
         f(1) = f(seed(0)), f(2) = f(seed(1))</td>
     </tr>
-
     <tr>
         <td>Collection.stream()</td>
           <td>Stream<E> stream()</td>
@@ -82,31 +80,26 @@ public void initStream() {
         <td>Stream<T> distinct()</td>
         <td>去除掉Stream中重复的元素</td>
     </tr>
-
     <tr>
         <td>filter</td>
         <td>Stream<T> filter(Predicate<? super T> predicate)</td>
         <td>对原Stream按照指定条件过滤</td>
     </tr>
-
     <tr>
         <td>map</td>
         <td>Stream<R> map(Function<? super T, ? extends R> mapper)</td>
         <td>对于Stream中包含的元素使用给定的转换函数进行转换操作</td>
     </tr>
-
     <tr>
         <td>flatMap</td>
         <td>Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)</td>
         <td>与map方法类似，都是将原Stream中的每一个元素通过转换函数转换，不同的是，该换转函数的对象是一个Stream</td>
     </tr>
-
     <tr>
         <td>peek</td>
         <td>Stream<T> peek(Consumer<? super T> action)</td>
         <td>生成一个包含原Stream的所有元素的新Stream，同时会提供一个消费函数（Consumer实例）</td>
     </tr>
-
     <tr>
         <td>skip</td>
         <td>Stream<T> skip(long n)</td>
@@ -123,7 +116,6 @@ public void initStream() {
         Stream<T> sorted(Comparator<? super T> comparator);</td>
         <td>sorted方法将对原Stream进行排序，返回一个有序列的新Stream</td>
     </tr>
-
     <tr>
         <td>reduce</td>
         <td>U reduce(U identity,
@@ -151,13 +143,11 @@ public void initStream() {
         <td>void forEach(Consumer<? super T> action)</td>
         <td>遍历Stream中的所元素，避免了使用for循环</td>
     </tr>
-
     <tr>
         <td>allMatch</td>
         <td>distinct</td>
         <td>allMatch操作用于判断Stream中的元素是否全部满足指定条件。如果全部满足条件返回true，否则返回false</td>
     </tr>
-
     <tr>
         <td>anyMatch</td>
         <td> boolean allMatch(Predicate<? super T> predicate)</td>
@@ -173,13 +163,11 @@ public void initStream() {
         <td>Optional<T> findAny()</td>
         <td>findAny操作用于获取含有Stream中的某个元素的Optional，如果Stream为空，则返回一个空的Optional</td>
     </tr>
-
     <tr>
         <td>noneMatch</td>
         <td>boolean noneMatch(Predicate<? super T> predicate)</td>
         <td>noneMatch方法将判断Stream中的所有元素是否满足指定的条件，如果所有元素都不满足条件，返回true；否则，返回false.</td>
     </tr>
-
 </table>
 
 #### 示例
